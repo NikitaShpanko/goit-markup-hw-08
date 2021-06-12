@@ -1,0 +1,90 @@
+.footer {
+  background-color: $background-dark;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__container {
+  @extend %flex;
+}
+
+.footer__logo {
+  color: $background-light;
+  margin-bottom: 20px;
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+.footer__contact {
+  color: $background-light;
+  margin-top: 9px;
+  line-height: 1.714;
+}
+
+.footer__contact-link {
+  color: $secondary-color;
+}
+
+.footer__header {
+  color: $background-light;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-transform: uppercase;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.footer__social {
+  margin-left: 70px;
+}
+
+.footer__subscription {
+  margin-left: 93px;
+}
+
+.subscribe {
+  @extend %flex;
+}
+
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+
+  padding-left: 16px;
+
+  background: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $background-light;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.subscribe__icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+
+  fill: $background-light;
+  @include transition(fill);
+  .subscribe__button:hover &,
+  .subscribe__button:focus & {
+    fill: $main-color;
+  }
+}
+
+.subscribe__button {
+  padding-left: 29px;
+  padding-right: 28px;
+}

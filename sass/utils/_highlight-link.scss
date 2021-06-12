@@ -1,0 +1,7 @@
+.highlight-link {
+  text-decoration: none;
+  @include transition(color);
+  &:hover, &:focus {
+    color: $highlight-color;
+  }
+}

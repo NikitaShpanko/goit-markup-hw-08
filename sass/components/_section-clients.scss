@@ -1,0 +1,22 @@
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid $svg-link-color;
+  border-radius: 4px;
+  fill: $svg-link-color;
+
+  @include transition(border-color, fill);
+  &:hover, &:focus {
+    border-color: $highlight-color;
+    fill: $highlight-color;
+  }
+}
+
+.client-link__icon {
+  width: 106px;
+  height: 60px;
+}

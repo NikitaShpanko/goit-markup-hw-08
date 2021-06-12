@@ -1,0 +1,58 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.172;
+  letter-spacing: 0.03em;
+  color: $main-color;
+  background: #e5e5e5;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list_spaced {
+  justify-content: space-between;
+}
+
+%flex {
+  display: flex;
+}
+
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+.section {
+  background-color: $background-light;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section_no-bottom {
+  padding-bottom: 0;
+}
+
+.section_gray {
+  background-color: $background-medium;
+}
+
+.std-title {
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  margin: 0 0 50px 0;
+}

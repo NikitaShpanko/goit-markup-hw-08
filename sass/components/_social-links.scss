@@ -1,0 +1,31 @@
+.social-links {
+  justify-content: center;
+}
+
+.social-links__item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.social-links__link {
+  display: block;
+  padding: 12px;
+  border-radius: 50%;
+  fill: $svg-link-color;
+
+  @include transition(background-color, fill);
+  &:hover, &:focus {
+    background-color: $highlight-color;
+    fill: $background-light;
+  }
+}
+
+.social-links__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.social-links__link_dark {
+  background: rgba(255, 255, 255, 0.1);
+  fill: $background-light;
+}
