@@ -71,7 +71,13 @@
 
   line-height: 1.714;
   color: $secondary-color;
-  margin-left: 13px;
+
+  @media (max-width: 1199px) {
+    font-size: 12px;
+  }
+  @media (min-width: 1200px) {
+    margin-left: 13px;
+  }
 }
 
 .agreement__label {
