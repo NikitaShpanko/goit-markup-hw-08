@@ -1,0 +1,14 @@
+@mixin grid-elem($Ncols, $space) {
+    $px-between: ($Ncols - 1) * $space;
+    width: calc((100% - #{$px-between}) / #{$Ncols});
+}
+
+@mixin grid-elem-on-devices($mob, $tablet, $pc, $space) {
+    @include grid-elem($mob, $space);
+    @media (min-width: 768px) {
+        @include grid-elem($tablet, $space);
+    }
+    @media (min-width: 1200px) {
+        @include grid-elem($pc, $space);
+    }
+}

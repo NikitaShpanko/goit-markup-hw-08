@@ -65,7 +65,7 @@
 }
 
 .agreement {
-  @extend %align-center;
+  @extend %flex-align-center;
   margin-top: 20px;
   margin-bottom: 30px;
 
@@ -75,7 +75,7 @@
 }
 
 .agreement__label {
-  @extend %align-center;
+  @extend %flex-align-center;
 }
 
 .agreement__link {

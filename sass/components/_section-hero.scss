@@ -11,6 +11,7 @@
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  @extend %no-scroll-until;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;

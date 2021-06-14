@@ -1,4 +1,9 @@
 .team-member {
+  @media (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
+  @include grid-elem-on-devices(1, 2, 4, 30px);
+  
   background-color: $background-light;
   padding-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),

@@ -5,8 +5,15 @@
 }
 
 .footer__container {
-  @extend %flex;
+  @extend %flex-phone-column;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 1199px) {
+    text-align: center;
+  }
 }
+
 
 .footer__logo {
   color: $background-light;
@@ -27,7 +34,7 @@
   color: $secondary-color;
 }
 
-.footer__header {
+.footer__title {
   color: $background-light;
   font-size: 14px;
   font-weight: 700;
@@ -38,21 +45,44 @@
 }
 
 .footer__social {
-  margin-left: 70px;
+  @media (max-width: 767px) {
+    margin-top: 60px;
+  }
+  @media (min-width: 768px) {
+    margin-left: auto;
+  }
+  @media (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .footer__subscription {
-  margin-left: 93px;
+  @media (max-width: 1199px) {
+    margin-top: 60px;
+    width: 100%;
+  }
+  @media (min-width: 1200px) {
+    margin-left: auto; //93px;
+  }
 }
 
-.subscribe {
-  @extend %flex;
-}
+// .subscribe {
+//  //@extend %flex-phone-column;
+// }
 
-.subscribe-input {
-  width: 358px;
+.subscribe__input {
+  //display: block;
+  width: 100%;
+  @media (min-width: 768px) {
+    //display: block;
+    width: 450px;
+  } 
+  @media (min-width: 1200px) {
+    //display: inline-block;
+    width: 358px;
+    margin-right: 12px;
+  }
   height: 50px;
-  margin-right: 12px;
 
   padding-left: 16px;
 
@@ -87,4 +117,10 @@
 .subscribe__button {
   padding-left: 29px;
   padding-right: 28px;
+  @media (max-width: 1199px) {
+    margin-top: 20px;
+  }
+  @media (min-width: 1200px) {
+    display: inline-block;
+  }
 }
