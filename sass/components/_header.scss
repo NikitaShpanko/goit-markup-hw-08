@@ -1,5 +1,4 @@
 .header {
-  // @extend %flex-align-center;
   background-color: $background-light;
   height: 80px;
   border: 1px #ececec;
@@ -7,7 +6,6 @@
 }
 
 .header__container {
-  // @extend %flex;
   @extend %flex-align-center;
   height: 100%;
 }

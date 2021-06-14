@@ -14,7 +14,6 @@
   }
 }
 
-
 .footer__logo {
   color: $background-light;
   margin-bottom: 20px;
@@ -66,19 +65,12 @@
   }
 }
 
-// .subscribe {
-//  //@extend %flex-phone-column;
-// }
-
 .subscribe__input {
-  //display: block;
   width: 100%;
   @media (min-width: 768px) {
-    //display: block;
     width: 450px;
   } 
   @media (min-width: 1200px) {
-    //display: inline-block;
     width: 358px;
     margin-right: 12px;
   }
