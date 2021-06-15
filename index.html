@@ -16,26 +16,25 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <!-- <body> -->
-  <body data-menu>
+  <body>
     <header class="header">
       <div class="container header__container">
-        <a class="logo" href="./index.html"
-          ><span class="logo_highlight">Web</span>Studio</a
-        >
-        <nav class="nav" data-menu>
+        <a class="logo" href="./index.html">
+          <span class="logo_highlight">Web</span>Studio
+        </a>
+        <nav class="nav">
           <ul class="list nav__list">
             <li class="nav__item">
               <a
                 class="highlight-link nav__link nav__link_current"
                 href="./index.html"
-                >Студия</a
-              >
+                >Студия
+              </a>
             </li>
             <li class="nav__item">
               <a class="highlight-link nav__link" href="./portfolio.html"
-                >Портфолио</a
-              >
+                >Портфолио
+              </a>
             </li>
             <li class="nav__item">
               <a class="highlight-link nav__link" href="">Контакты</a>
@@ -70,16 +69,7 @@
         </nav>
         <button type="button" class="menu-button" data-menu-button>
           <svg width="40" height="40">
-            <use
-              class="menu-button__svg"
-              data-menu
-              href="./images/icons.svg#icon-close"
-            ></use>
-            <use
-              class="menu-button__svg is-open"
-              data-menu
-              href="./images/icons.svg#icon-burger"
-            ></use>
+            <use href="./images/icons.svg#icon-burger"></use>
           </svg>
         </button>
       </div>
@@ -565,6 +555,56 @@
         </button>
       </div>
     </div>
+
+    <div class="mob-menu" data-menu>
+      <div class="container mob-menu__container">
+        <nav>
+          <ul class="list nav__list">
+            <li class="nav__item">
+              <a
+                class="highlight-link nav__link nav__link_current"
+                href="./index.html"
+                >Студия
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="highlight-link nav__link" href="./portfolio.html"
+                >Портфолио
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="highlight-link nav__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-contact">
+          <a
+            class="highlight-link header-contact__link"
+            href="tel:+380961111111"
+          >
+            <span>+38 096 111 11 11</span>
+          </a>
+          <a
+            class="highlight-link header-contact__link"
+            href="mailto:info@devstudio.com"
+          >
+            <span>info@devstudio.com</span>
+          </a>
+        </div>
+        <div class="mob-social">
+          <a class="mob-social__link" href="">Instagram</a>
+          <a class="mob-social__link" href="">Twitter</a>
+          <a class="mob-social__link" href="">Facebook</a>
+          <a class="mob-social__link" href="">LinkedIn</a>
+        </div>
+        <button type="button" class="menu-button" data-menu-close>
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>

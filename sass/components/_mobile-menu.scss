@@ -1,0 +1,64 @@
+.mob-menu {
+  position: fixed;
+  //   z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 570px;
+  overflow: auto;
+  background-color: $background-light;
+
+  @include transition(opacity);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mob-menu__container {
+  position: relative;
+  @extend %flex;
+  flex-direction: column;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  min-height: 100%;
+}
+
+.menu-button {
+  position: absolute;
+  //   z-index: 101;
+  right: 15px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+
+  @include transition(fill);
+  &:hover,
+  &:focus {
+    fill: $highlight-color;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  // &.is-open {
+  //   position: fixed;
+  // }
+}

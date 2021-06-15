@@ -21,25 +21,11 @@
   @extend %flex;
   @media (max-width: 767px) {
     display: none;
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    // bottom: 0;
-    left: 0;
-    right: 0;
-    height: 796px;
-    padding: 48px 40px;
-    flex-direction: column;
-    // justify-content: space-between;
-    background-color: $background-light;
-  }
-  // @extend %flex-align-center;
-  // @extend %phone-column;
-  flex-grow: 1;
+    ////////////////////////////////////
 
-  &.is-open {
-    display: flex;
+    ////////////////////////////////////
   }
+  flex-grow: 1;
 }
 
 @media (max-width: 767px) {
@@ -101,12 +87,12 @@
 
 .header-contact {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column; //-reverse;
   @media (max-width: 767px) {
     margin-top: auto;
   }
   @media (min-width: 768px) {
-    flex-direction: column;
+    //flex-direction: column;
     margin-left: auto;
   }
   @media (min-width: 1200px) {
@@ -146,7 +132,7 @@
   }
 
   @media (max-width: 767px) {
-    &:last-child {
+    &:first-child {
       font-size: 34px;
       color: $highlight-color;
       margin-bottom: 32px;
@@ -186,41 +172,9 @@
   }
 }
 
-.menu-button {
-  position: absolute;
-  z-index: 101;
-  right: 15px;
-  top: 10px;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  // border: 1px solid rgba(0, 0, 0, 0.1);
-  // border-radius: 50%;
-  border: none;
-  box-shadow: none;
-
-  @include transition(fill);
-  &:hover,
-  &:focus {
-    fill: $highlight-color;
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-
-  // &.is-open {
-  //   position: fixed;
-  // }
-}
-
-.menu-button__svg {
-  display: none;
-  &.is-open {
-    display: block;
-  }
-}
+// .menu-button__svg {
+//   display: none;
+//   &.is-open {
+//     display: block;
+//   }
+// }
