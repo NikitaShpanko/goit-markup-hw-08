@@ -28,14 +28,14 @@
 }
 
 .modal-text-box__icon {
-  position:absolute;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
   width: 18px;
   height: 18px;
 
-  fill:$main-color;
+  fill: $main-color;
 
   @include transition(fill);
   .modal-text-box:focus + & {

@@ -13,7 +13,8 @@
   fill: $svg-link-color;
 
   @include transition(background-color, fill);
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $highlight-color;
     fill: $background-light;
   }

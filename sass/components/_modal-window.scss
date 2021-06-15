@@ -42,7 +42,8 @@
   box-shadow: none;
 
   @include transition(fill);
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     fill: $highlight-color;
   }
 }

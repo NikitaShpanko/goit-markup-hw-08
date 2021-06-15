@@ -1,4 +1,6 @@
 .header {
+  @extend %no-scroll-until;
+
   background-color: $background-light;
   height: 60px;
   border: 1px #ececec;
@@ -28,7 +30,7 @@
     height: 796px;
     padding: 48px 40px;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     background-color: $background-light;
   }
   // @extend %flex-align-center;
@@ -37,6 +39,13 @@
 
   &.is-open {
     display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  body.is-open {
+    height: 796px;
+    overflow-y: hidden;
   }
 }
 
@@ -51,7 +60,7 @@
   }
   @media (min-width: 1200px) {
     margin-left: 93px;
-  } 
+  }
 }
 
 .nav__item:not(:first-child) {
@@ -60,7 +69,7 @@
   }
   @media (min-width: 768px) {
     margin-left: 50px;
-  } 
+  }
 }
 
 .nav__link {
@@ -81,7 +90,7 @@
       position: absolute;
       bottom: -32px;
       display: block;
-      content: "";
+      content: '';
       background-color: $highlight-color;
       width: 100%;
       height: 4px;
@@ -93,13 +102,16 @@
 .header-contact {
   display: flex;
   flex-direction: column-reverse;
+  @media (max-width: 767px) {
+    margin-top: auto;
+  }
   @media (min-width: 768px) {
     flex-direction: column;
     margin-left: auto;
   }
   @media (min-width: 1200px) {
     flex-direction: row;
-  }  
+  }
 }
 
 .header-contact__icon {
@@ -142,6 +154,38 @@
   }
 }
 
+.mob-social {
+  @extend %flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  margin-left: -10px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  @media (max-width: 438px) {
+    min-height: 60px;
+  }
+}
+
+.mob-social__link {
+  display: block;
+  font-size: 18px;
+  line-height: 1.222;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $highlight-color;
+
+  //&:not(:first-child) {
+  padding-left: 10px;
+  //}
+  &:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
 .menu-button {
   position: absolute;
   z-index: 101;
@@ -160,7 +204,8 @@
   box-shadow: none;
 
   @include transition(fill);
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     fill: $highlight-color;
   }
 
