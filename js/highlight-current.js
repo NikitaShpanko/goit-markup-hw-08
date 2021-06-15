@@ -1,5 +1,5 @@
 (() => {
-  const highLight = function (className) {
+  const highlightLink = function (className) {
     const url = document.URL;
     const elems = document.querySelectorAll('a.' + className);
     console.log(elems);
@@ -10,6 +10,6 @@
       }
   };
 
-  highLight('nav__link');
-  highLight('mob-nav__link');
+  highlightLink('nav__link');
+  highlightLink('mob-nav__link');
 })();
