@@ -15,7 +15,7 @@
     <header class="header">
         <div class="container header__container">
             <a class="logo" href="./index.html"><span class="logo_highlight">Web</span>Studio</a>
-            <nav class="nav">
+            <nav class="nav" data-menu>
                 <ul class="list nav__list">
                     <li class="nav__item">
                         <a class="highlight-link nav__link nav__link_current" href="./index.html">Студия</a>
@@ -42,6 +42,16 @@
                     </a>
                 </div>
             </nav>
+            <button type="button"
+                    class="menu-button"
+                    data-menu-button>
+                <svg width="40" height="40">
+                    <use class="menu-button__svg" data-menu
+                         href="./images/icons.svg#icon-close"></use>
+                    <use class="menu-button__svg is-open" data-menu
+                         href="./images/icons.svg#icon-burger"></use>
+                </svg>
+            </button>
         </div>
     </header>
     <main>
@@ -97,19 +107,25 @@
                 <h2 class="std-title">Чем мы занимаемся</h2>
                 <ul class="list list_spaced">    <!--what-we-do__list-->
                     <li class="what-we-do">
-                        <img src="./images/what-we-do1.jpg"
+                        <img srcset="./images/what-we-do1.jpg 1x,
+                                     ./images/what-we-do1@2x.jpg 2x"
+                            src="./images/what-we-do1.jpg"
                             alt="Десктопные приложения"
                             width=370>
                         <h3 class="what-we-do__text">Десктопные приложения</h3>
                     </li>
                     <li class="what-we-do">
-                        <img src="./images/what-we-do2.jpg"
+                        <img srcset="./images/what-we-do2.jpg 1x,
+                                     ./images/what-we-do2@2x.jpg 2x"
+                            src="./images/what-we-do1.jpg"
                             alt="Мобильные приложения"
                             width=370>
                         <h3 class="what-we-do__text">Мобильные приложения</h3>
                     </li>
                     <li class="what-we-do">
-                        <img src="./images/what-we-do3.jpg"
+                        <img srcset="./images/what-we-do3.jpg 1x,
+                                     ./images/what-we-do3@2x.jpg 2x"
+                            src="./images/what-we-do1.jpg"
                             alt="Дизайнерские решения"
                             width=370>
                         <h3 class="what-we-do__text">Дизайнерские решения</h3>
@@ -122,7 +138,8 @@
                 <h2 class="std-title">Наша команда</h2>
                 <ul class="list list_spaced">  <!--team__list-->
                     <li class="team-member">
-                        <img src="./images/person1.jpg" alt="Игорь Демьяненко"><!-- width=270 -->
+                        <img srcset="./images/person1.jpg 1x, ./images/person1.jpg 2x"
+                             src="./images/person1.jpg" alt="Игорь Демьяненко">
                         <h3 class="team-member__name">Игорь Демьяненко</h3>
                         <p class="team-member__job">Product Designer</p>
                         <ul class="list social-links">
@@ -157,7 +174,8 @@
                         </ul>
                     </li>
                     <li class="team-member">
-                        <img src="./images/person2.jpg" alt="Ольга Репина"><!-- width=270 -->
+                        <img srcset="./images/person2.jpg 1x, ./images/person2.jpg 2x"
+                             src="./images/person2.jpg" alt="Ольга Репина">
                         <h3 class="team-member__name">Ольга Репина</h3>
                         <p class="team-member__job">Frontend Developer</p>
                         <ul class="list social-links">
@@ -192,7 +210,8 @@
                         </ul>
                     </li>
                     <li class="team-member">
-                        <img src="./images/person3.jpg" alt="Николай Тарасов"><!-- width=270 -->
+                        <img srcset="./images/person3.jpg 1x, ./images/person3.jpg 2x"
+                             src="./images/person3.jpg" alt="Николай Тарасов">
                         <h3 class="team-member__name">Николай Тарасов</h3>
                         <p class="team-member__job">Marketing</p>
                         <ul class="list social-links">
@@ -227,7 +246,8 @@
                         </ul>
                     </li>
                     <li class="team-member">
-                        <img src="./images/person4.jpg" alt="Михаил Ермаков"><!-- width=270 -->
+                        <img srcset="./images/person4.jpg 1x, ./images/person4.jpg 2x"
+                             src="./images/person4.jpg" alt="Михаил Ермаков">
                         <h3 class="team-member__name">Михаил Ермаков</h3>
                         <p class="team-member__job">UI Designer</p>
                         <ul class="list social-links">
@@ -434,5 +454,6 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

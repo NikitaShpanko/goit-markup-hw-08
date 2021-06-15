@@ -6,5 +6,10 @@ $background-medium: #f5f4fa;
 $background-dark: #2f303a;
 $svg-link-color: #afb1b8;
 
+$gradient: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    );
+
 $trans-dur: 250ms;
 $trans-func: cubic-bezier(0.4, 0, 0.2, 1);

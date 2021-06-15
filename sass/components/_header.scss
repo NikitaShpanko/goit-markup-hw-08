@@ -1,12 +1,16 @@
 .header {
   background-color: $background-light;
-  height: 80px;
+  height: 60px;
   border: 1px #ececec;
   border-style: none none solid none;
+
+  @media (min-width: 768px) {
+    height: 80px;
+  }
 }
 
 .header__container {
-  // position: relative;
+  position: relative;
   @extend %flex-align-center;
   height: 100%;
 }
@@ -14,18 +18,26 @@
 .nav {
   @extend %flex;
   @media (max-width: 767px) {
-    position: fixed;
+    display: none;
+    position: absolute;
+    z-index: 100;
     top: 0;
-    bottom: 0;
+    // bottom: 0;
     left: 0;
     right: 0;
+    height: 796px;
     padding: 48px 40px;
     flex-direction: column;
     justify-content: space-between;
+    background-color: $background-light;
   }
   // @extend %flex-align-center;
   // @extend %phone-column;
   flex-grow: 1;
+
+  &.is-open {
+    display: flex;
+  }
 }
 
 .nav__list {
@@ -128,10 +140,42 @@
       margin-bottom: 32px;
     }
   }
+}
 
-  // @media (min-width: 1200px) {
-  //   & + & {
-  //     margin-left: 30px;
-  //   }
+.menu-button {
+  position: absolute;
+  z-index: 101;
+  right: 15px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  // border: 1px solid rgba(0, 0, 0, 0.1);
+  // border-radius: 50%;
+  border: none;
+  box-shadow: none;
+
+  @include transition(fill);
+  &:hover, &:focus {
+    fill: $highlight-color;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  // &.is-open {
+  //   position: fixed;
   // }
+}
+
+.menu-button__svg {
+  display: none;
+  &.is-open {
+    display: block;
+  }
 }

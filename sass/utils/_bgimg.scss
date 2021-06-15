@@ -1,0 +1,27 @@
+@mixin bgimg($prefix, $suffix, $mobile: 'mobile',
+             $tablet: 'tablet', $pc: 'pc') {
+    background-image:
+        url('#{$prefix}#{$mobile}#{$suffix}');
+    @media (min-width: 768px) {
+        background-image:
+            url('#{$prefix}#{$tablet}#{$suffix}');
+    }
+    @media (min-width: 1200px) {
+        background-image:
+            url('#{$prefix}#{$pc}#{$suffix}');
+    }
+}
+
+@mixin bgimg_gradient($prefix, $suffix, $mobile: 'mobile',
+             $tablet: 'tablet', $pc: 'pc') {
+    background-image: $gradient,
+        url('#{$prefix}#{$mobile}#{$suffix}');
+    @media (min-width: 768px) {
+        background-image: $gradient,
+            url('#{$prefix}#{$tablet}#{$suffix}');
+    }
+    @media (min-width: 1200px) {
+        background-image: $gradient,
+            url('#{$prefix}#{$pc}#{$suffix}');
+    }
+}

@@ -125,10 +125,17 @@ img {
 }
 
 .std-title {
-  font-size: 36px;
-  line-height: 1.167;
+  font-size: 28px;
+  margin-bottom: 30px;
+  line-height: 1.172;
   text-align: center;
-  margin: 0 0 50px 0;
+}
+
+@media (min-width: 1200px) {
+  .std-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .highlight-link {
@@ -204,12 +211,19 @@ img {
 
 .header {
   background-color: #ffffff;
-  height: 80px;
+  height: 60px;
   border: 1px #ececec;
   border-style: none none solid none;
 }
 
+@media (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
+}
+
 .header__container {
+  position: relative;
   height: 100%;
 }
 
@@ -219,15 +233,22 @@ img {
 
 @media (max-width: 767px) {
   .nav {
-    position: fixed;
+    display: none;
+    position: absolute;
+    z-index: 100;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
+    height: 796px;
     padding: 48px 40px;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #ffffff;
   }
+}
+
+.nav.is-open {
+  display: flex;
 }
 
 @media (max-width: 767px) {
@@ -360,6 +381,41 @@ img {
   }
 }
 
+.menu-button {
+  position: absolute;
+  z-index: 101;
+  right: 15px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-button:hover, .menu-button:focus {
+  fill: #2196f3;
+}
+
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button__svg {
+  display: none;
+}
+
+.menu-button__svg.is-open {
+  display: block;
+}
+
 .social-links {
   justify-content: center;
 }
@@ -395,7 +451,7 @@ img {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background-mobile.jpg");
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -408,17 +464,55 @@ img {
   margin-right: auto;
 }
 
+@media (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background-tablet.jpg");
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background-pc.jpg");
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background-mobile@2x.jpg");
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 768px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (-moz-min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background-tablet@2x.jpg");
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 1200px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), (-moz-min-device-pixel-ratio: 2) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background-pc@2x.jpg");
+  }
+}
+
 .hero__motto {
-  font-size: 44px;
-  font-weight: 900;
   color: #ffffff;
-  line-height: 1.36em;
+  font-weight: 900;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  max-width: 696px;
+  font-size: 26px;
+  line-height: 1.615em;
+  max-width: 360px;
+}
+
+@media (min-width: 1200px) {
+  .hero__motto {
+    font-size: 44px;
+    line-height: 1.364em;
+    max-width: 696px;
+  }
 }
 
 .quality {
@@ -707,6 +801,12 @@ img {
   flex-wrap: wrap;
 }
 
+@media (min-width: 76px) and (max-width: 1199px) {
+  .footer__container {
+    justify-content: space-around;
+  }
+}
+
 @media (max-width: 1199px) {
   .footer__container {
     text-align: center;
@@ -745,12 +845,6 @@ img {
 @media (max-width: 767px) {
   .footer__social {
     margin-top: 60px;
-  }
-}
-
-@media (min-width: 768px) {
-  .footer__social {
-    margin-left: auto;
   }
 }
 

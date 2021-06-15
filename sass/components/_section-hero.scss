@@ -1,9 +1,12 @@
 .hero {
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../images/background.jpg");
+  // background-image: $gradient,
+  //   url("../images/background.jpg");
+  @include bgimg_gradient('../images/background-', '.jpg');
+  @media (min-device-pixel-ratio: 2),
+         (-webkit-min-device-pixel-ratio: 2),
+         (-moz-min-device-pixel-ratio: 2) {
+    @include bgimg_gradient('../images/background-', '@2x.jpg');
+  }
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,14 +21,21 @@
 }
 
 .hero__motto {
-  font-size: 44px;
+  color: $background-light;  
   font-weight: 900;
-  color: $background-light;
-  line-height: 1.36em;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  max-width: 696px;
+
+  font-size: 26px;
+  line-height: 1.615em;
+  max-width: 360px; 
+
+  @media (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.364em;
+    max-width: 696px;    
+  }
 }
