@@ -47,6 +47,7 @@
 }
 
 .mob-nav__link_current {
+  transition: none;
   color: $highlight-color;
 }
 

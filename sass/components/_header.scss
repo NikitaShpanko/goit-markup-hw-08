@@ -47,12 +47,9 @@
 
 .nav__link_current {
   position: relative;
-  ////////// COPY ///////////
+  transition: none;
   color: $highlight-color;
 
-  //////////  END ///////////
-
-  // @media (min-width: 768px) {
   &::after {
     position: absolute;
     bottom: -32px;
@@ -63,7 +60,6 @@
     height: 4px;
     border-radius: 2px;
   }
-  // }
 }
 
 .header-contact {
